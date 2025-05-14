@@ -15,7 +15,7 @@ docker build -t plot-gallery .
 # -u $(id -u):$(id -g) runs the container with the current user's UID and GID
 # --rm automatically removes the container when it exits
 # --name plot-gallery gives the container a name for easier management
-docker run --rm --name plot-gallery \   
+docker run --rm --name plot-gallery \
   -p 3000:3000 \
   -v $PLOTS_DIR:/app/public/plots \
   -u $(id -u):$(id -g) \
