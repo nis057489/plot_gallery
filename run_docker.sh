@@ -1,10 +1,10 @@
 #!/bin/bash
+
+PLOTS_DIR=$(pwd)/public/plots
 # Create the directory here so that it uses your account's user ID and group ID
 # instead of the container's root user
 # This is necessary to avoid permission issues when writing files to the host
 # system.
-
-PLOTS_DIR=$(pwd)/public/plots
 mkdir -p $PLOTS_DIR
 
 # Build the Docker image from the Dockerfile in the current directory
