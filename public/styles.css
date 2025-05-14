@@ -1,0 +1,47 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.plot {
+    flex: 1 1 100%;
+    /* Ensure that each plot takes full width for smaller screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.plot img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Remove extra space below the image */
+    max-height: 80vh;
+    /* Limit image height to 80% of the viewport height */
+}
+
+@media (min-width: 600px) {
+    .plot {
+        flex: 1 1 45%;
+        /* On larger screens, allow two images per row */
+    }
+}
+
+@media (min-width: 900px) {
+    .plot {
+        flex: 1 1 30%;
+        /* On larger screens, allow three images per row */
+    }
+}
